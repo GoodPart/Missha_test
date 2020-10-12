@@ -2,16 +2,25 @@
 <html lang="en">
 <head>
   @@include('@@webRoot/pages/_template/_head.html')
-  <link rel="stylesheet" type="text/css" href="@@webRoot/assets/css/main.css">
+  <!-- <link rel="stylesheet" type="text/css" href="@@webRoot/assets/css/main.css"> -->
 </head>
 <body class="has-bottommenu is-main has-scroll">
   <div class="layout">
-    <!-- @@include('@@webRoot/components/layout/header/index.html') -->
+    @@include('@@webRoot/components/layout/header/index.html')
+    @@include('@@webRoot/components/layout/navigation/index.html')
+    
+    <div class="module module--01">
+      module1
+    </div>
+    <div class="module module--02">
+      module2
+    </div>
   
     <!-- @@include('@@webRoot/components/layout/bottomMenu/index.html') -->
   </div>
   <!-- @@include('@@webRoot/components/layout/navigation/index.html') -->
-  <!-- @@include('@@webRoot/pages/_template/_scripts.html') -->
+  @@include('@@webRoot/pages/_template/_newScript.html')
+  <!-- @@include('@@webRoot/assets/js/index.js') -->
 
   <script>
     var app = new App();
