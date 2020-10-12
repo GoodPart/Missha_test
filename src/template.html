@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  @@include('@@webRoot/pages/_template/_head.html')
+  <link rel="stylesheet" type="text/css" href="@@webRoot/assets/css/template.css">
+</head>
+<body class="has-bottommenu has-scroll is-sub">
+  <div class="layout">
+    @@include('@@webRoot/components/layout/header/sub.html', {"title": "FLEESW STYLE"})
+    <div class="layout-main">
+      <div class="layout-contents">
+        <div class="module module--01 visual" data-aos="fade-up" >
+          <div class="module-inner">
+            <img src="@@webRoot/assets/images/template/module01/bg.jpg" width="100%">
+
+            <span class="date" data-aos="fade-up" >2020.09.10 ~ 09.25</span>
+
+            <div class="info">
+              <p class="category" data-aos="fade-up" data-aos-delay="200">20 fall/winter</p>
+              <p class="title" data-aos="fade-up" data-aos-delay="400"><em>FLEECE</em><span>STYLE</span></p>
+              <p class="desc" data-aos="fade-up" data-aos-delay="600">디스커버러들의 플리스 스타일링</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="module module--02" data-aos="fade-up" data-aos-delay="200">
+          <div class="module-inner">
+            <img src="@@webRoot/assets/images/template/module02/bg.jpg" width="100%">
+
+            <div class="text">
+              <p class="title" data-aos="fade-up" data-aos-delay="200">benefit</p>
+              <p class="desc" data-aos="fade-up" data-aos-delay="350">플리스 아이템을 구매하신 모든 분에게<br> 10% 할인 쿠폰을 드립니다.</p>
+              <p class="date" data-aos="fade-up" data-aos-delay="500">2020.09.10 ~ 09.25</p>
+              <div class="coupon" data-aos="fade-up" data-aos-delay="650">
+                <img src="@@webRoot/assets/images/template/module02/coupon.png" class="image" width="275">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="module module--03" data-aos="fade-up" data-aos-delay="200">
+          <div class="module-inner">
+            <img src="@@webRoot/assets/images/template/module03/bg.jpg" width="100%">
+            <div class="text">
+              <p class="title" data-aos="fade-up" data-aos-delay="200">FINDING TREASURE</p>
+              <span class="line" data-aos="fade-up" data-aos-delay="400"></span>
+              <p class="desc" data-aos="fade-up" data-aos-delay="600">일상을 벗어나 오랜 시간 염원하던<br>
+                소중한 시간을 찾아 떠난 디스커버러들.<br>
+                흥미진진한 그들만의 보물찾기가 시작된다.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="module module--04" data-aos="fade-up" data-aos-delay="200">
+          <div class="banner-container banner-container--prd-video">
+            @@loop('@@webRoot/components/module/banner/prd-video.html', 
+              [
+                { 
+                  "cover": "@@webRoot/assets/images/list/module03/item01.jpg",
+                  "name": "",
+                  "price": "",
+                  "videoUrl": "@@webRoot/assets/media/video3.mp4"
+                }
+              ]
+            )
+          </div>
+        </div>
+
+        <div class="module module--05" data-aos="fade-up" data-aos-delay="200">
+          <div class="module-inner">
+            <span class="num" data-aos="fade-up" data-aos-delay="200">#<em>1</em></span>
+            <div class="box">
+              <img src="@@webRoot/assets/images/template/module05/bg.jpg" width="100%">
+              <div class="text" data-aos="fade-up"  data-aos-delay="200">
+                <span class="num" data-aos="fade-up" data-aos-delay="0">#<em>1</em></span>
+                <p class="title" data-aos="fade-up" data-aos-delay="400">FOREST<br>LOOK</p>
+                <p class="desc" data-aos="fade-up" data-aos-delay="600">일상을 떠나 소중한 순간을 찾아서 떠나는 길</p>
+              </div>
+            </div>  
+          </div>
+        </div>
+
+        <div class="module module--06" data-aos="fade-up" data-aos-delay="200">
+          <div class="image-box" data-aos="fade-up"  data-aos-delay="200">
+            <img src="@@webRoot/assets/images/template/module06/01.jpg" width="100%">
+          </div>
+          <div class="image-box" data-aos="fade-up"  data-aos-delay="400">
+            <img src="@@webRoot/assets/images/template/module06/02.png" width="100%">
+          </div>
+          <div class="image-box" data-aos="fade-up"  data-aos-delay="600">
+            <img src="@@webRoot/assets/images/template/module06/03.jpg" width="100%">
+          </div>
+        </div>
+
+        <div class="module module--07" data-aos="fade-up" data-aos-delay="200">
+          <div class="module-inner">
+            <span class="num" data-aos="fade-up" data-aos-delay="200">#<em>2</em></span>
+            <div class="box">
+              <img src="@@webRoot/assets/images/template/module07/bg.jpg" width="100%">
+              <div class="text" data-aos="fade-up" data-aos-delay="200">
+                <span class="num" data-aos="fade-up" data-aos-delay="0">#<em>2</em></span>
+                <p class="title" data-aos="fade-up" data-aos-delay="400">TREE<br>HOUSE<br>LOOK</p>
+                <p class="desc" data-aos="fade-up" data-aos-delay="600">보물같은 소중한 순간들의 발견</p>
+              </div>
+            </div>  
+          </div>
+        </div>
+
+        <div class="module module--08" data-aos="fade-up" data-aos-delay="200">
+          <div class="image-box" data-aos="fade-up" data-aos-delay="200">
+            <img src="@@webRoot/assets/images/template/module08/01.jpg" width="100%">
+          </div>
+          <div class="image-box" data-aos="fade-up" data-aos-delay="400">
+            <img src="@@webRoot/assets/images/template/module08/02.jpg" width="100%">
+          </div>
+          <div class="image-box" data-aos="fade-up" data-aos-delay="600">
+            <img src="@@webRoot/assets/images/template/module08/03.png" width="100%">
+          </div>
+        </div>
+
+        <div class="module module--09" data-aos="fade-up" data-aos-delay="200">
+          <div class="module-inner">
+            <span class="num" data-aos="fade-up" data-aos-delay="200">#<em>3</em></span>
+            <div class="box">
+              <img src="@@webRoot/assets/images/template/module07/bg.jpg" width="100%">
+              <div class="text" data-aos="fade-up" data-aos-delay="200">
+                <span class="num" data-aos="fade-up" data-aos-delay="0">#<em>3</em></span>
+                <p class="title" data-aos="fade-up" data-aos-delay="400">CAMPING<br>LOOK</p>
+                <p class="desc" data-aos="fade-up" data-aos-delay="600">영원히 기억될 우리의 보물들</p>
+              </div>
+            </div>  
+          </div>
+        </div>
+
+        <div class="module module--10" data-aos="fade-up" data-aos-delay="200">
+          <div class="image-box" data-aos="fade-up" data-aos-delay="200">
+            <img src="@@webRoot/assets/images/template/module09/01.jpg" width="100%">
+          </div>
+          <div class="image-box" data-aos="fade-up" data-aos-delay="200">
+            <img src="@@webRoot/assets/images/template/module09/02.png" width="100%">
+          </div>
+          <div class="image-box" data-aos="fade-up" data-aos-delay="200">
+            <img src="@@webRoot/assets/images/template/module09/03.jpg" width="100%">
+          </div>
+          <div class="image-box" data-aos="fade-up" data-aos-delay="200">
+            <img src="@@webRoot/assets/images/template/module09/04.png" width="100%">
+          </div>
+        </div>
+
+        <div class="module module--11" data-aos="fade-up" data-aos-delay="200">
+          <div class="image-box">
+            <img src="@@webRoot/assets/images/template/module10/01.jpg" width="100%">
+          </div>
+        </div>
+
+
+      </div>
+      <!-- @@include('@@webRoot/components/layout/footer/index.html') -->
+    </div>
+    @@include('@@webRoot/components/layout/bottomMenu/index.html')
+  </div>
+  @@include('@@webRoot/components/layout/navigation/index.html')
+  @@include('@@webRoot/pages/_template/_scripts.html')
+
+  <script>
+    var app = new App();
+   
+  </script>
+</body>
+</html>

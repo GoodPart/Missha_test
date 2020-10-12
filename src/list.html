@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  @@include('@@webRoot/pages/_template/_head.html')
+  <link rel="stylesheet" type="text/css" href="@@webRoot/assets/css/list.css">
+</head>
+<body class="has-bottommenu has-scroll is-sub">
+  <div class="layout">
+    @@include('@@webRoot/components/layout/header/sub.html', {"title": "MEN",  "subMenu": "true"})
+    <div class="layout-main">
+      <div class="layout-contents">
+        <div class="module module--01">
+          <div class="swiper-container swiper-container--full">
+            <ul class="swiper-wrapper">
+              @@loop('@@webRoot/components/module/slide/full.html', 
+                [
+                  { 
+                    "imgSrc": "@@webRoot/assets/images/list/module01/item01.jpg",
+                    "category": "2020 F/W WINDBREAKER", 
+                    "title": "레저와 일상을 함께하는 애슬레저 바람막이",
+                    "link": "@@webRoot/vip.html"
+                  }
+                ]
+              )
+            </ul>
+            <div class="swiper-scrollbar"></div>
+            <div class="swiper-unit">
+              <span class="swiper-paging">
+                <em class="swiper-paging__current">01</em> / 
+                <span class="swiper-paging__total">12</span>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="module module--02">
+          <div class="module-title">
+            New In
+          </div>
+          <div class="swiper-container swiper-container--prd-scroll">
+            <ul class="swiper-wrapper">
+              @@loop('@@webRoot/components/module/slide/prd-scroll.html', 
+                [
+                  { 
+                    "imgSrc": "@@webRoot/assets/images/list/module02/item01.jpg",
+                    "name": "디스커버리 맨투맨", 
+                    "price": "89,000" 
+                  },
+                  { 
+                    "imgSrc": "@@webRoot/assets/images/list/module02/item02.jpg",
+                    "name": "디스커버리 맨투맨", 
+                    "price": "89,000" 
+                  },
+                  { 
+                    "imgSrc": "@@webRoot/assets/images/list/module02/item01.jpg",
+                    "name": "디스커버리 맨투맨", 
+                    "price": "89,000" 
+                  },
+                  { 
+                    "imgSrc": "@@webRoot/assets/images/list/module02/item02.jpg",
+                    "name": "디스커버리 맨투맨", 
+                    "price": "89,000" 
+                  },
+                  { 
+                    "imgSrc": "@@webRoot/assets/images/list/module02/item01.jpg",
+                    "name": "디스커버리 맨투맨", 
+                    "price": "89,000" 
+                  },
+                  { 
+                    "imgSrc": "@@webRoot/assets/images/list/module02/item02.jpg",
+                    "name": "디스커버리 맨투맨", 
+                    "price": "89,000" 
+                  }
+                ]
+              )
+            </ul>
+            <div class="swiper-scrollbar"></div>
+          </div>
+        </div>
+
+        @@include('@@webRoot/components/layout/listMenu/index.html')
+
+        <div class="list-contents">
+          <div class="module module--03">
+            <div class="banner-container banner-container--prd-video">
+              @@loop('@@webRoot/components/module/banner/prd-video.html', 
+                [
+                  { 
+                    "cover": "@@webRoot/assets/images/list/module03/item01.jpg",
+                    "name": "테크 남성 플리스 후드 자켓",
+                    "price": "149,000",
+                    "videoUrl": "@@webRoot/assets/media/video3.mp4"
+                  }
+                ]
+              )
+            </div>
+          </div>
+
+          <div class="module module--04">
+            <div class="banner-container banner-container--prd-grid2">
+              <ul class="prd-list unit-flex">
+                @@loop('@@webRoot/components/module/banner/prd-grid2.html', 
+                  [
+                    { 
+                      "imgSrc": "@@webRoot/assets/images/list/module04/item01.jpg",
+                      "name": "디스커버리 후디", 
+                      "price": "99,000" 
+                    },
+                    { 
+                      "imgSrc": "@@webRoot/assets/images/list/module04/item02.jpg",
+                      "name": "테크 남성 플리스 후드 자켓", 
+                      "price": "179,000" 
+                    },
+                    { 
+                      "imgSrc": "@@webRoot/assets/images/list/module04/item03.jpg",
+                      "name": "백면드로잉 기능성 긴팔 티셔츠", 
+                      "price": "59,000" 
+                    },
+                    { 
+                      "imgSrc": "@@webRoot/assets/images/list/module04/item04.jpg",
+                      "name": "백면드로잉 기능성 긴팔 티셔츠", 
+                      "price": "59,000" 
+                    }
+                  ]
+                )
+              </ul>
+            </div>
+          </div>
+
+          <div class="module module--05">
+            <div class="swiper-container swiper-container--prd-card swiper-container--card-box">
+              <ul class="swiper-wrapper">
+                @@loop('@@webRoot/components/module/slide/card-box.html', 
+                  [
+                    { 
+                      "imgSrc": "@@webRoot/assets/images/list/module05/item01.jpg",
+                      "category": "NEW", 
+                      "title": "더 가볍고 더 따뜻하게<br> 20FW 테크 플리스 후드" 
+                    },
+                    { 
+                      "imgSrc": "@@webRoot/assets/images/list/module05/item02.jpg",
+                      "category": "NEW", 
+                      "title": "더 가볍고 더 따뜻하게<br> 20FW 테크 플리스 후드" 
+                    },
+                    { 
+                      "imgSrc": "@@webRoot/assets/images/list/module05/item02.jpg",
+                      "category": "NEW", 
+                      "title": "더 가볍고 더 따뜻하게<br> 20FW 테크 플리스 후드" 
+                    }
+                  ]
+                )
+              </ul>
+              <div class="swiper-unit">
+                <span class="swiper-paging">
+                  <em class="swiper-paging__current">01</em> / 
+                  <span class="swiper-paging__total">05</span>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="module module--06">
+            <div class="banner-container banner-container--prd-grid2">
+              <ul class="prd-list unit-flex">
+                @@loop('@@webRoot/components/module/banner/prd-grid2.html', 
+                  [
+                    { 
+                      "imgSrc": "@@webRoot/assets/images/list/module06/item01.jpg",
+                      "name": "빅로고 기능성 긴팔티셔츠", 
+                      "price": "55,000" 
+                    },
+                    { 
+                      "imgSrc": "@@webRoot/assets/images/list/module06/item02.jpg",
+                      "name": "빅로고 기능성 긴팔티셔츠", 
+                      "price": "55,000" 
+                    }
+                  ]
+                )
+              </ul>
+              
+            </div>
+          </div>
+
+          <div class="module module--07">
+            <div class="banner-container banner-container--prd-grid1">
+              <ul class="prd-list unit-flex">
+                @@loop('@@webRoot/components/module/banner/prd-grid2.html', 
+                  [
+                    { 
+                      "imgSrc": "@@webRoot/assets/images/list/module07/item01.jpg",
+                      "name": "등판 빅로고 하이넥 변형 플리스 자켓", 
+                      "price": "179,000",
+                      "expand": "@@webRoot/assets/images/list/module07/expand.png",
+                      "expandSize": "244"
+                    }
+                  ]
+                )
+              </ul>
+            </div>
+          </div>
+
+          <div class="module module--08">
+            <div class="banner-container banner-container--prd-grid2">
+              <ul class="prd-list unit-flex">
+                @@loop('@@webRoot/components/module/banner/prd-grid2.html', 
+                  [
+                    { 
+                      "imgSrc": "@@webRoot/assets/images/list/module08/item01.jpg",
+                      "name": "컬러블럭 플리스 후디자켓", 
+                      "price": "199,000" 
+                    },
+                    { 
+                      "imgSrc": "@@webRoot/assets/images/list/module08/item02.jpg",
+                      "name": "NEW 마운틴 남성 레깅스", 
+                      "price": "69,000" 
+                    },
+                    { 
+                      "imgSrc": "@@webRoot/assets/images/list/module08/item02.jpg",
+                      "name": "남성 겨울 테이퍼드 팬츠", 
+                      "price": "69,000" 
+                    },
+                    { 
+                      "imgSrc": "@@webRoot/assets/images/list/module08/item02.jpg",
+                      "name": "남성 겨울 테이퍼드 팬츠", 
+                      "price": "69,000" 
+                    }
+                  ]
+                )
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- @@include('@@webRoot/components/layout/footer/index.html') -->
+    </div>
+    @@include('@@webRoot/components/layout/bottomMenu/index.html')
+  </div>
+  @@include('@@webRoot/components/layout/navigation/index.html')
+  @@include('@@webRoot/pages/_template/_scripts.html')
+
+  <script>
+    var app = new App();
+   
+  </script>
+</body>
+</html>

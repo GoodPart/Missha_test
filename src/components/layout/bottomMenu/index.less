@@ -1,0 +1,113 @@
+@import '../../../assets/css/_variables.less';
+
+.layout-bottommenu {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  padding-bottom: 0;
+  padding-bottom: calc(~'constant(safe-area-inset-bottom) / 2');
+  padding-bottom: calc(~'env(safe-area-inset-bottom) / 2');
+  left: 0;
+  opacity: 1;
+  visibility: visible;
+  z-index: @zIndex-bottomMenu;
+  transition: transform 0.3s linear, opacity 0.3s linear, visibility 0.3s linear;
+
+  &.is--hidden {
+    transform: translateY(100%);
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &.is-home {
+    .sprite-icon-bottom-home {
+      .sprite-icon-bottom-home-on;
+    }
+
+    .bottommenu__item--home {
+      .text {
+        color: #19355b;
+      }
+    }
+  }
+}
+
+&.layout-bottommenu--vip {
+  height: 57px;
+  background-color: #19355b;
+
+  .bottommenu__item {
+  }
+
+  .bottommenu__item:first-child {
+    position: relative;
+    flex: 0 0 auto;
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 1px;
+      height: 36px;
+      background-color: rgba(255, 255, 255, 0.1);
+      top: 10px;
+      right: 0;
+    }
+  }
+
+  .button--menu--cart {
+    padding: 13px 25px 0;
+  }
+
+  .button--menu--order {
+    padding-top: 13px;
+    font-size: 21px;
+    letter-spacing: -0.03em;
+    color: #fff;
+  }
+}
+
+&.layout-bottommenu--basic {
+  height: @bottom-menu-height;
+  background-color: #f4f4f4;
+  border-top: 1px solid #e5e5e5;
+
+  .bottommenu__button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: @bottom-menu-height;
+    text-align: center;
+    font-size: 1rem;
+
+    .text {
+      display: block;
+      margin-top: 0px;
+      line-height: 1.83;
+      .nest-letter;
+    }
+
+    .icon {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 35px;
+    }
+
+    .sprite-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+.bottommenu__list {
+}
+
+.bottommenu__item {
+  flex: 1;
+  text-align: center;
+}

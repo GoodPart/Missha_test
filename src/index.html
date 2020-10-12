@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  @@include('@@webRoot/pages/_template/_head.html')
+  <link rel="stylesheet" type="text/css" href="@@webRoot/assets/css/main.css">
+</head>
+<body class="has-bottommenu is-main has-scroll">
+  <div class="layout">
+    @@include('@@webRoot/components/layout/header/index.html')
+    <div class="layout-main">
+      <div class="layout-contents">
+        <div class="module module--01">
+          <div class="swiper-container swiper-container--full">
+            <ul class="swiper-wrapper">
+              @@loop('@@webRoot/components/module/slide/full.html', 
+                [
+                  { 
+                    "imgSrc": "@@webRoot/assets/images/main/module01/bg-01.jpg",
+                    "category": "20 spring/summer", 
+                    "title": "시원하고 쾌적한 <br>기능성 티셔츠 라인",
+                    "link": "@@webRoot/template.html"
+                  },
+                  { 
+                    "imgSrc": "@@webRoot/assets/images/main/module01/bg-02.jpg",
+                    "category": "20 fall/winter", 
+                    "title": "Dicoverer's <br>FLEECE STYLE" 
+                  },
+                  { 
+                    "imgSrc": "@@webRoot/assets/images/main/module01/bg-03.jpg",
+                    "category": "20 fall/winter", 
+                    "title": "매일매일 입고 싶은<br> 맨투맨 &amp; 후디" 
+                  },
+                  { 
+                    "imgSrc": "@@webRoot/assets/images/main/module01/bg-01.jpg",
+                    "category": "20 spring/summer", 
+                    "title": "시원하고 쾌적한 <br>기능성 티셔츠 라인" 
+                  },
+                  { 
+                    "imgSrc": "@@webRoot/assets/images/main/module01/bg-02.jpg",
+                    "category": "20 fall/winter", 
+                    "title": "Dicoverer's <br>FLEECE STYLE" 
+                  },
+                  { 
+                    "imgSrc": "@@webRoot/assets/images/main/module01/bg-03.jpg",
+                    "category": "20 fall/winter", 
+                    "title": "매일매일 입고 싶은<br> 맨투맨 &amp; 후디" 
+                  },
+                  { 
+                    "imgSrc": "@@webRoot/assets/images/main/module01/bg-01.jpg",
+                    "category": "20 spring/summer", 
+                    "title": "시원하고 쾌적한 <br>기능성 티셔츠 라인" 
+                  },
+                  { 
+                    "imgSrc": "@@webRoot/assets/images/main/module01/bg-02.jpg",
+                    "category": "20 fall/winter", 
+                    "title": "Dicoverer's <br>FLEECE STYLE" 
+                  },
+                  { 
+                    "imgSrc": "@@webRoot/assets/images/main/module01/bg-03.jpg",
+                    "category": "20 fall/winter", 
+                    "title": "매일매일 입고 싶은<br> 맨투맨 &amp; 후디" 
+                  }
+                ]
+              )
+            </ul>
+            <div class="swiper-scrollbar"></div>
+            <div class="swiper-unit">
+              <span class="swiper-paging">
+                <em class="swiper-paging__current">01</em> / 
+                <span class="swiper-paging__total">12</span>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="module module--02">
+          <div class="banner-container banner-container--band">
+            @@loop('@@webRoot/components/module/banner/band.html', 
+              [
+                { 
+                  "bgColor": "#f3f2e8",
+                  "bgImage": "@@webRoot/assets/images/main/module02/bg-01.png", 
+                  "bgPosition": "0 0",
+                  "title": "<strong>KB 국민카드 7% 할인</strong> / 30만원 이상 결제 시" 
+                }
+              ]
+            )
+          </div>
+        </div>
+
+        <div class="module module--03">
+          <div class="module-title">
+            <em>공유님</em>을 위한 추천 스타일
+          </div>
+          <div class="swiper-container swiper-container--prd-scroll">
+            <ul class="swiper-wrapper">
+              @@loop('@@webRoot/components/module/slide/prd-scroll.html', 
+                [
+                  { 
+                    "imgSrc": "@@webRoot/assets/images/main/module03/item01.jpg",
+                    "name": "디스커버리 후디", 
+                    "price": "99,000" 
+                  },
+                  { 
+                    "imgSrc": "@@webRoot/assets/images/main/module03/item02.jpg",
+                    "name": "컬러블럭 플리스 베스트", 
+                    "price": "179,000" 
+                  },
+                  { 
+                    "imgSrc": "@@webRoot/assets/images/main/module03/item01.jpg",
+                    "name": "디스커버리 후디", 
+                    "price": "99,000" 
+                  },
+                  { 
+                    "imgSrc": "@@webRoot/assets/images/main/module03/item02.jpg",
+                    "name": "컬러블럭 플리스 베스트", 
+                    "price": "179,000" 
+                  },
+                  { 
+                    "imgSrc": "@@webRoot/assets/images/main/module03/item01.jpg",
+                    "name": "디스커버리 후디", 
+                    "price": "99,000" 
+                  },
+                  { 
+                    "imgSrc": "@@webRoot/assets/images/main/module03/item02.jpg",
+                    "name": "컬러블럭 플리스 베스트", 
+                    "price": "179,000" 
+                  }
+                ]
+              )
+            </ul>
+            <div class="swiper-scrollbar"></div>
+           
+          </div>
+        </div>
+
+        <div class="module module--04" style="background-image:url(@@webRoot/assets/images/main/module04/bg.jpg)">
+          <div class="module-title">
+            리버티<br> 바람막이
+          </div>
+          <div class="swiper-container swiper-container--prd-scroll">
+            <ul class="swiper-wrapper">
+              @@loop('@@webRoot/components/module/slide/prd-scroll.html', 
+                [
+                  { 
+                    "imgSrc": "@@webRoot/assets/images/main/module04/item01.jpg",
+                    "name": "",
+                    "price": "219,000" 
+                  },
+                  { 
+                    "imgSrc": "@@webRoot/assets/images/main/module04/item02.jpg",
+                    "name": "",
+                    "price": "219,000" 
+                  },
+                  { 
+                    "imgSrc": "@@webRoot/assets/images/main/module04/item03.jpg",
+                    "name": "",
+                    "price": "219,000" 
+                  },
+                  { 
+                    "imgSrc": "@@webRoot/assets/images/main/module04/item01.jpg",
+                    "name": "",
+                    "price": "219,000" 
+                  },
+                  { 
+                    "imgSrc": "@@webRoot/assets/images/main/module04/item02.jpg",
+                    "name": "",
+                    "price": "219,000" 
+                  },
+                  { 
+                    "imgSrc": "@@webRoot/assets/images/main/module04/item03.jpg",
+                    "name": "",
+                    "price": "219,000" 
+                  }
+                ]
+              )
+            </ul>
+            <div class="swiper-scrollbar"></div>
+          </div>
+        </div>
+
+        <div class="module module--05">
+          <div class="module-title">
+            Discovery TV
+          </div>
+          <div class="swiper-container swiper-container--video">
+            <div class="swiper-wrapper">
+              @@loop('@@webRoot/components/module/slide/video.html', 
+                  [
+                    { 
+                      "videoUrl": "@@webRoot/assets/media/video2.mp4",
+                      "cover": "/assets/images/data/main/cover-intro.jpg"
+                    }
+                  ]
+                )
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+          <div class="swiper-container swiper-container--prd-scroll">
+            <ul class="swiper-wrapper">
+              @@loop('@@webRoot/components/module/slide/prd-scroll.html', 
+                [
+                  { 
+                    "imgSrc": "@@webRoot/assets/images/main/module05/item01.jpg",
+                    "name": "",
+                    "price": "159,000" 
+                  },
+                  { 
+                    "imgSrc": "@@webRoot/assets/images/main/module05/item02.jpg",
+                    "name": "",
+                    "price": "149,000" 
+                  },
+                  { 
+                    "imgSrc": "@@webRoot/assets/images/main/module05/item03.jpg",
+                    "name": "",
+                    "price": "139,000" 
+                  },
+                  { 
+                    "imgSrc": "@@webRoot/assets/images/main/module05/item01.jpg",
+                    "name": "",
+                    "price": "159,000" 
+                  },
+                  { 
+                    "imgSrc": "@@webRoot/assets/images/main/module05/item02.jpg",
+                    "name": "",
+                    "price": "149,000" 
+                  },
+                  { 
+                    "imgSrc": "@@webRoot/assets/images/main/module05/item03.jpg",
+                    "name": "",
+                    "price": "139,000" 
+                  }
+                ]
+              )
+            </ul>
+            <div class="swiper-scrollbar"></div>
+          </div>
+          
+          <div class="module module--06">
+            <div class="module-title">
+              New Arrival
+            </div>
+
+            <div class="swiper-container swiper-container--prd-box">
+              <ul class="swiper-wrapper">
+                @@loop('@@webRoot/components/module/slide/prd-box.html', 
+                  [
+                    { 
+                      "imgSrc": "@@webRoot/assets/images/main/module06/item01.jpg",
+                      "name": "조거 케이지",
+                      "price": "39,000" 
+                    },
+                    { 
+                      "imgSrc": "@@webRoot/assets/images/main/module06/item02.jpg",
+                      "name": "베이직 덴버 맨투맨",
+                      "price": "69,000" 
+                    },
+                    { 
+                      "imgSrc": "@@webRoot/assets/images/main/module06/item03.jpg",
+                      "name": "구스다운 패딩베스트",
+                      "price": "129,000" 
+                    }
+                  ]
+                )
+              </ul>
+              <div class="swiper-unit">
+                <span class="swiper-button-prev"></span>
+                <div class="swiper-pagination"></div>
+                <span class="swiper-button-next"></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="module module--07">
+            <div class="module-title">
+              Weekly Best
+            </div>
+
+            <div class="swiper-container swiper-container--prd-card">
+              <ul class="swiper-wrapper">
+                @@loop('@@webRoot/components/module/slide/prd-card.html', 
+                  [
+                    { 
+                      "imgSrc": "@@webRoot/assets/images/main/module07/item01.jpg",
+                      "category": "MEN BEST ITEM",
+                      "title": "부드러운 감촉으로 더 따뜻한<br> 테크 플리스 후드 자켓",
+                      "desc": "일상을 떠난 디스커버리들의 다양한 플리스 스타일링" 
+                    },
+                    { 
+                      "imgSrc": "@@webRoot/assets/images/main/module07/item02.jpg",
+                      "category": "20FW EARLY BIRD",
+                      "title": "더 따뜻하고 가벼운<br> 새로운 스타일의 테크 플리스",
+                      "desc": "놓칠 수 없는 얼리버드 2만원 쿠폰 혜택" 
+                    },
+                    { 
+                      "imgSrc": "@@webRoot/assets/images/main/module07/item03.jpg",
+                      "category": "20FW EARLY BIRD",
+                      "title": "세가지 핏과 트렌디한 스타일<br> 디스커버리 숏패딩",
+                      "desc": "새롭게 업그레이드 된 20FW 숏패딩 얼리버드" 
+                    },
+                    { 
+                      "imgSrc": "@@webRoot/assets/images/main/module07/item01.jpg",
+                      "category": "MEN BEST ITEM",
+                      "title": "부드러운 감촉으로 더 따뜻한<br> 테크 플리스 후드 자켓",
+                      "desc": "일상을 떠난 디스커버리들의 다양한 플리스 스타일링" 
+                    },
+                    { 
+                      "imgSrc": "@@webRoot/assets/images/main/module07/item02.jpg",
+                      "category": "20FW EARLY BIRD",
+                      "title": "더 따뜻하고 가벼운<br> 새로운 스타일의 테크 플리스",
+                      "desc": "놓칠 수 없는 얼리버드 2만원 쿠폰 혜택" 
+                    },
+                    { 
+                      "imgSrc": "@@webRoot/assets/images/main/module07/item03.jpg",
+                      "category": "20FW EARLY BIRD",
+                      "title": "세가지 핏과 트렌디한 스타일<br> 디스커버리 숏패딩",
+                      "desc": "새롭게 업그레이드 된 20FW 숏패딩 얼리버드" 
+                    }
+                  ]
+                )
+              </ul>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <div class="module module--08">
+            <div class="module-title">
+              Discoverer On
+            </div>
+            <div class="swiper-container swiper-container--video">
+              <div class="swiper-wrapper">
+                @@loop('@@webRoot/components/module/slide/video-full.html', 
+                  [
+                    { 
+                      "videoUrl": "@@webRoot/assets/media/video1.mp4",
+                      "cover": "/assets/images/data/main/cover-intro.jpg"
+                    }
+                  ]
+                )
+              </div>
+              <div class="swiper-unit">
+                <span class="swiper-button-prev"></span>
+                <div class="swiper-pagination"></div>
+                <span class="swiper-button-next"></span>
+              </div>
+            </div>
+          </div> 
+
+          <div class="module module--09">
+            <div class="module-title">
+              Style Pick
+            </div>
+            <div class="banner-container banner-container--grid-3">
+              @@loop('@@webRoot/components/module/banner/grid-3.html', 
+                [
+                  { 
+                    "imgSrc": "@@webRoot/assets/images/main/module09/item01.jpg", 
+                    "title": "NEW 베이직 스웨트 아이템",
+                    "desc": "매일매일 입고 싶은 데일리룩의 필수 아이템" 
+                  },
+                  { 
+                    "imgSrc": "@@webRoot/assets/images/main/module09/item02.jpg", 
+                    "title": "20FW 플리스 스타일링",
+                    "desc": "매일매일 입고 싶은 데일리룩의 필수 아이템" 
+                  },
+                  { 
+                    "imgSrc": "@@webRoot/assets/images/main/module09/item03.jpg", 
+                    "title": "2020 썸머 래쉬가드",
+                    "desc": "매일매일 입고 싶은 데일리룩의 필수 아이템" 
+                  }
+                ]
+              )
+            </div>
+          </div>
+
+          <div class="module module--10">
+            <div class="module-title">
+              Style in SNS
+
+              <span class="module-more">
+                전체보기
+                <i class="icon sprite-icon sprite-icon-arrow-right-black"></i>
+              </span>
+            </div>
+            <div class="banner-container banner-container--sns">
+              <img src="@@webRoot/assets/images/main/module10/item.jpg" style="width: 100%">
+            </div>
+          </div>
+
+          <div class="module module--11">
+            <div class="module-title">
+              MD's Pick
+            </div>
+            <div class="module-visual">
+              <img src="@@webRoot/assets/images/main/module11/visual01.jpg" style="width: 100%">
+              <div class="visual-info">
+                <div class="visual-info__inner" data-sal="slide-up" style="--sal-duration: 1s; --sal-delay: 1s;">
+                  세미 루즈핏으로 활동적이고 트렌디한 디자인의 R.D.S 인증 유러피안 다운 숏패딩 반슬리, 빛나는 리플렉티브 로고로 포인트를 더했습니다.
+                </div>
+              </div>
+            </div>
+            <div class="module-title">
+              반슬리 R.D.S 숏패딩
+            </div>
+            <div class="swiper-container swiper-container--prd-scroll">
+              <ul class="swiper-wrapper">
+                @@loop('@@webRoot/components/module/slide/prd-scroll.html', 
+                  [
+                    { 
+                      "imgSrc": "@@webRoot/assets/images/main/module11/item01.jpg",
+                      "name": "", 
+                      "price": "229,000" 
+                    },
+                    { 
+                      "imgSrc": "@@webRoot/assets/images/main/module11/item02.jpg",
+                      "name": "", 
+                      "price": "229,000" 
+                    },
+                    { 
+                      "imgSrc": "@@webRoot/assets/images/main/module11/item03.jpg",
+                      "name": "", 
+                      "price": "229,000" 
+                    },
+                    { 
+                      "imgSrc": "@@webRoot/assets/images/main/module11/item01.jpg",
+                      "name": "", 
+                      "price": "229,000" 
+                    },
+                    { 
+                      "imgSrc": "@@webRoot/assets/images/main/module11/item02.jpg",
+                      "name": "", 
+                      "price": "229,000" 
+                    },
+                    { 
+                      "imgSrc": "@@webRoot/assets/images/main/module11/item03.jpg",
+                      "name": "", 
+                      "price": "229,000" 
+                    }
+                  ]
+                )
+              </ul>
+              <div class="swiper-scrollbar"></div>
+            </div>
+          </div>
+
+          <div class="module module--12">
+            <div class="module-visual">
+              <img src="@@webRoot/assets/images/main/module12/visual01.jpg" style="width: 100%">
+            </div>
+            <div class="module-title">
+              뮬리 슬라이드
+            </div>
+            <div class="swiper-container swiper-container--prd-scroll">
+              <ul class="swiper-wrapper">
+                @@loop('@@webRoot/components/module/slide/prd-scroll.html', 
+                  [
+                    { 
+                      "imgSrc": "@@webRoot/assets/images/main/module12/item01.jpg",
+                      "name": "", 
+                      "price": "89,000" 
+                    },
+                    { 
+                      "imgSrc": "@@webRoot/assets/images/main/module12/item02.jpg",
+                      "name": "", 
+                      "price": "89,000" 
+                    },
+                    { 
+                      "imgSrc": "@@webRoot/assets/images/main/module12/item03.jpg",
+                      "name": "", 
+                      "price": "89,000" 
+                    },
+                    { 
+                      "imgSrc": "@@webRoot/assets/images/main/module12/item01.jpg",
+                      "name": "", 
+                      "price": "89,000" 
+                    },
+                    { 
+                      "imgSrc": "@@webRoot/assets/images/main/module12/item02.jpg",
+                      "name": "", 
+                      "price": "89,000" 
+                    },
+                    { 
+                      "imgSrc": "@@webRoot/assets/images/main/module12/item03.jpg",
+                      "name": "", 
+                      "price": "89,000" 
+                    }
+                  ]
+                )
+              </ul>
+              <div class="swiper-scrollbar"></div>
+            </div>
+          </div>
+          
+          <div class="module module--13">
+            <div class="module-title">
+              Kid's Item
+            </div>
+            <div class="banner-container banner-container--grid-2">
+              @@loop('@@webRoot/components/module/banner/grid-2.html', 
+                [
+                  { 
+                    "imgSrc": "@@webRoot/assets/images/main/module13/item01.jpg", 
+                    "title": "버킷 디워커 키즈"
+                  },
+                  { 
+                    "imgSrc": "@@webRoot/assets/images/main/module13/item02.jpg", 
+                    "title": "가족이 함께 입는 티셔츠"
+                  }
+                ]
+              )
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+      @@include('@@webRoot/components/layout/footer/index.html')
+    </div>
+    @@include('@@webRoot/components/layout/bottomMenu/index.html')
+  </div>
+  @@include('@@webRoot/components/layout/navigation/index.html')
+  @@include('@@webRoot/pages/_template/_scripts.html')
+
+  <script>
+    var app = new App();
+  </script>
+</body>
+</html>

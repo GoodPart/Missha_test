@@ -1,0 +1,58 @@
+@import './_mixin.less';
+@import '../../components/layout/listMenu/index.less';
+
+.module {
+  position: relative;
+}
+
+.module--01 {
+  .swiper-slide {
+    height: 580px;
+  }
+
+  .slide-text {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 78px;
+    box-sizing: border-box;
+    padding: 0 25px;
+  }
+
+  .slide-category {
+    font-size: 30px;
+    line-height: 38px;
+    font-weight: 600;
+    letter-spacing: -0.05em;
+    color: #fff;
+  }
+
+  .slide-title {
+    margin-top: 10px;
+    font-size: 17px;
+    letter-spacing: -0.02em;
+    color: #fff;
+  }
+
+  .swiper-unit {
+    padding-left: 25px;
+    justify-content: flex-start;
+    letter-spacing: 0;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    font-weight: 400;
+
+    .swiper-paging__current {
+      font-size: 16px;
+      color: #fff;
+    }
+  }
+}
+
+.module--02 {
+  margin-top: 20px;
+}
+
+.module--06 {
+  margin-top: 60px;
+}

@@ -1,0 +1,161 @@
+@import '../../assets/css/_mixin.less';
+
+.video-container {
+  position: relative;
+  overflow: hidden;
+
+  > .poster {
+    z-index: 3;
+    display: none;
+  }
+  > .video {
+    opacity: 0;
+
+    .is-loaded& {
+      z-index: 4;
+      opacity: 1;
+    }
+  }
+  > .poster,
+  > .video {
+    position: relative;
+    width: 100%;
+    vertical-align: top;
+  }
+  &.video-container--full {
+    > .poster,
+    > .video {
+      max-width: 100%;
+    }
+  }
+}
+.video__controller {
+  display: none;
+  z-index: 3;
+
+  &.shadow {
+    display: block;
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      transition: opacity 0.2s linear;
+      left: 0;
+      top: 0;
+      z-index: 5;
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+    }
+  }
+  .button-video-play,
+  .button-video-volume {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.3s linear;
+    z-index: 10;
+  }
+  .button-video-play {
+    left: 50%;
+    top: 50%;
+
+    transform: translate3d(-50%, -50%, 0);
+  }
+  .button-video-volume {
+    right: 15px;
+    top: 15px;
+  }
+
+  &.is-active {
+    .button-video-play,
+    .button-video-volume {
+      opacity: 1;
+    }
+    &::before {
+      opacity: 1;
+    }
+  }
+  .sprite-icon {
+    .hidden-text;
+  }
+}
+
+.button-video-play {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  background-color: transparent;
+  position: relative;
+  border: 0 none;
+  .sprite-icon-play-big,
+  .sprite-icon-pause-big {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    opacity: 0;
+    transition: opacity 0.3s linear;
+    .hidden-text;
+  }
+
+  .sprite-icon-pause-big {
+    opacity: 1;
+  }
+
+  .is-paused & {
+    .sprite-icon-play-big {
+      opacity: 1;
+    }
+    .sprite-icon-pause-big {
+      opacity: 0;
+    }
+  }
+}
+
+.button-video-volume {
+  width: 16px;
+  height: 16px;
+  position: relative;
+  border: 0 none;
+  background: transparent;
+  .sprite-icon-mute,
+  .sprite-icon-unmute {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: opacity 0.3s linear;
+    opacity: 0;
+    .hidden-text;
+  }
+  .sprite-icon-unmute {
+    opacity: 1;
+  }
+  .is-muted & {
+    .sprite-icon-unmute {
+      opacity: 0;
+    }
+    .sprite-icon-mute {
+      opacity: 1;
+    }
+  }
+}
+
+.video__cover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-color: #000;
+  transition: opacity 0.3s linear;
+  opacity: 1;
+  z-index: 5;
+
+  .is-loaded & {
+    z-index: 1;
+    opacity: 0;
+  }
+}

@@ -1,0 +1,40 @@
+<div class="layout-header layout-header--sub is--shape">
+  <div class="unit-inner unit-flex">
+    <div class="header-menu unit-flex">
+      <button type="button" class="button button--back" onclick="history.back()">
+        <i class="icon"><span class="hidden-element">뒤로가기</span></i>
+      </button>
+      @@if(context.title) {
+        <h1 class="header-title">
+          <button type="button" class="button button--submenu">@@title
+            @@if(context.subMenu) {
+              <i class="icon"></i>
+            }
+          </button>
+        </h1>
+      }
+
+      @@if(!context.title) {
+        <a href="@@webRoot/index.html" class="button button--home">
+          <i class="icon"><span class="hidden-element">메인으로</span></i>
+        </a>
+      }
+      
+    </div>
+    
+    <ul class="header-menu unit-flex">
+      @@if(context.search) {
+        <li class="header-menu__item header-menu__item--search">
+          <i class="icon">
+            <span class="hidden-element">검색</span>
+          </i>
+        </li>
+      }
+      <li class="header-menu__item header-menu__item--shoppingbag">
+        <i class="icon">
+          <span class="hidden-element">장바구니</span>
+        </i>
+      </li>
+    </ul>
+  </div>
+</div>

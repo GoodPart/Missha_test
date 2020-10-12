@@ -1,0 +1,83 @@
+// =============================================================================
+// Mixins
+// =============================================================================
+
+// Self Clear
+.self-clear() {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+// User Selection
+.user-select(@type: none) {
+  /*! autoprefixer: ignore next */
+  -webkit-user-select: @type;
+  -moz-user-select: @type;
+  -ms-user-select: @type;
+  -o-user-select: @type;
+  user-select: @type;
+}
+
+// Touch callout
+.touch-callout(@type: none) {
+  /*! autoprefixer: ignore next */
+  -webkit-touch-callout: @type;
+  -moz-touch-callout: @type;
+  touch-callout: @type;
+}
+
+// Tab highlighting
+.tap-highlight-color(@color: rgba(0, 0, 0, 0)) {
+  /*! autoprefixer: ignore next */
+  -webkit-tap-highlight-color: @color;
+  -moz-tap-highlight-color: @color;
+  tap-highlight-color: @color;
+}
+
+// 단어 단위로 줄바꿈
+.keep-word() {
+  word-break: keep-all;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.text-ellipsis() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text-ellipsis-line(@line: 2) {
+  display: -webkit-box;
+  -webkit-line-clamp: @line;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+// hiding text
+.hidden-text(@display: block) {
+  display: @display;
+  overflow: hidden;
+  white-space: nowrap;
+  text-indent: 110%;
+  line-height: 2;
+  font-size: 0;
+}
+
+// hiding element
+.hidden-element() {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  .user-select;
+  z-index: 2;
+}
+
+.nest-letter() {
+  letter-spacing: -0.03em;
+}

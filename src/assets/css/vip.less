@@ -1,0 +1,170 @@
+@import './_mixin.less';
+@import '../../components/sprites/sprite-icon-variable.less';
+
+.module-title {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.module--01 {
+  height: 100%;
+
+  .swiper-slide {
+    background-size: cover;
+    height: 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+
+  .swiper-unit {
+    position: absolute;
+    display: flex;
+    left: 20px;
+    bottom: 30px;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 10;
+
+    .swiper-pagination-bullets {
+      display: flex;
+      align-items: center;
+    }
+
+    .swiper-pagination-bullet {
+      margin: 0 0 0 5px;
+      width: 8px;
+      height: 8px;
+      border-radius: 0;
+      box-sizing: border-box;
+      border: 1px solid #919191;
+
+      &-active {
+        border-color: #19355b;
+        background-color: #19355b;
+      }
+    }
+
+    .video-container {
+      opacity: 0;
+
+      &.is-loaded {
+        opacity: 1;
+      }
+      .img-w,
+      .img-h {
+        position: absolute;
+      }
+      .img-w {
+        width: 100%;
+        height: auto;
+        left: 0;
+        top: 0;
+      }
+      .img-h {
+        width: auto;
+        height: 100%;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  .button--360 {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+  }
+
+  .button--vip-play {
+    padding: 20px 0 20px 20px;
+
+    .icon {
+      display: inline-block;
+      .sprite-icon;
+      .sprite-icon-play;
+    }
+  }
+
+  .button-video-volume {
+    top: 20px;
+    left: 20px;
+    right: auto;
+  }
+
+  .video-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+}
+
+.module--02 {
+  margin-top: -10px;
+  position: relative;
+  z-index: 10;
+}
+
+.module--03 {
+  margin-top: 20px;
+
+  .swiper-slide {
+    width: 232px;
+  }
+}
+
+.module--04 {
+  margin-top: 40px;
+}
+
+.module--05 {
+  margin-top: 40px;
+  padding-bottom: 65px;
+}
+
+.layer--360 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: url(../../assets/images/vip/02.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+  z-index: 20;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s linear, opacity 0.3s linear;
+
+  .layer-360-active & {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.button--360-close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.layer--video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s linear, opacity 0.3s linear;
+
+  .layer-video-active & {
+    visibility: visible;
+    opacity: 1;
+  }
+}

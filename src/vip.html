@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  @@include('@@webRoot/pages/_template/_head.html')
+  <link rel="stylesheet" type="text/css" href="@@webRoot/assets/css/vip.css">
+</head>
+<body class="has-bottommenu has-scroll is-sub is-vip">
+  <div class="layout">
+    @@include('@@webRoot/components/layout/header/sub.html', {"search": "true"})
+    <div class="layout-main">
+      <div class="layout-contents">
+        <div class="module module--01">
+          <div class="swiper-container swiper-container--vip">
+            <ul class="swiper-wrapper">
+              @@loop('@@webRoot/components/module/slide/full.html', 
+                [
+                  { 
+                    "videoUrl": "@@webRoot/assets/media/video6.mp4"
+                  },
+                  { 
+                    "imgSrc": "@@webRoot/assets/images/vip/01.jpg",
+                    "innerHtml" : "<button type='button' class='button button--360'><i class='icon sprite-icon sprite-icon-360'></i></button><div class='layer layer--360'><button type='button' class='button button--360-close'><i class='icon sprite-icon sprite-icon-close-02'></i></button></div>"
+                  },
+                  { 
+                    "imgSrc": "@@webRoot/assets/images/vip/03.jpg"
+                  },
+                  { 
+                    "videoUrl": "@@webRoot/assets/media/video5.mp4"
+                  }
+                ]
+              )
+            </ul>
+            
+
+            <div class="layer layer--video">
+              
+            </div>
+            <div class="swiper-unit">
+              <!-- <button type="button" class="button button--vip-play">
+                <i class="icon"></i>
+              </button> -->
+              <div class="swiper-pagination"></div>
+            </div>
+            
+          </div>
+        </div>
+
+        <div class="module module--02">
+          <img src="@@webRoot/assets/images/vip/detail.png" width="100%">
+        </div>
+        
+        <div class="module module--03"> 
+          <div class="module-title">
+            함께 추천하는 상품
+          </div>
+          <div class="swiper-container swiper-container--prd-scroll">
+            <ul class="swiper-wrapper">
+              @@loop('@@webRoot/components/module/slide/prd-scroll.html', 
+                [
+                  { 
+                    "imgSrc": "@@webRoot/assets/images/vip/module03/item01.jpg",
+                    "name": "디스커버리 후디", 
+                    "price": "99,000" 
+                  },
+                  { 
+                    "imgSrc": "@@webRoot/assets/images/vip/module03/item02.jpg",
+                    "name": "컬러블럭 플리스 베스트", 
+                    "price": "179,000" 
+                  },
+                  { 
+                    "imgSrc": "@@webRoot/assets/images/vip/module03/item01.jpg",
+                    "name": "디스커버리 후디", 
+                    "price": "99,000" 
+                  },
+                  { 
+                    "imgSrc": "@@webRoot/assets/images/vip/module03/item02.jpg",
+                    "name": "컬러블럭 플리스 베스트", 
+                    "price": "179,000" 
+                  },
+                  { 
+                    "imgSrc": "@@webRoot/assets/images/vip/module03/item01.jpg",
+                    "name": "디스커버리 후디", 
+                    "price": "99,000" 
+                  },
+                  { 
+                    "imgSrc": "@@webRoot/assets/images/vip/module03/item02.jpg",
+                    "name": "컬러블럭 플리스 베스트", 
+                    "price": "179,000" 
+                  }
+                ]
+              )
+            </ul>
+            <div class="swiper-scrollbar"></div>
+           
+          </div>
+        </div>
+
+        <div class="module module--04">
+          <div class="module-title">
+            완벽한 코디 상품
+          </div>
+          <div class="swiper-container swiper-container--prd-scroll">
+            <ul class="swiper-wrapper">
+              @@loop('@@webRoot/components/module/slide/prd-scroll.html', 
+                [
+                  { 
+                    "imgSrc": "@@webRoot/assets/images/vip/module04/item01.jpg",
+                    "name": "카고 조거형 트레이닝 팬츠", 
+                    "price": "99,000" 
+                  },
+                  { 
+                    "imgSrc": "@@webRoot/assets/images/vip/module04/item02.jpg",
+                    "name": "조거 트레이닝 팬츠", 
+                    "price": "179,000" 
+                  },
+                  { 
+                    "imgSrc": "@@webRoot/assets/images/vip/module04/item03.jpg",
+                    "name": "베이직 트리코드 팬츠", 
+                    "price": "99,000" 
+                  },
+                  { 
+                    "imgSrc": "@@webRoot/assets/images/vip/module04/item01.jpg",
+                    "name": "카고 조거형 트레이닝 팬츠", 
+                    "price": "99,000" 
+                  },
+                  { 
+                    "imgSrc": "@@webRoot/assets/images/vip/module04/item02.jpg",
+                    "name": "디스커버리 후디", 
+                    "price": "179,000" 
+                  },
+                  { 
+                    "imgSrc": "@@webRoot/assets/images/vip/module04/item03.jpg",
+                    "name": "디스커버리 맨투맨", 
+                    "price": "99,000" 
+                  }
+                ]
+              )
+            </ul>
+            <div class="swiper-scrollbar"></div>
+           
+          </div>
+        </div>
+
+        <div class="module module--05">
+          <div class="module-title">
+            같이 구매한 상품
+          </div>
+          <div class="swiper-container swiper-container--prd-scroll">
+            <ul class="swiper-wrapper">
+              @@loop('@@webRoot/components/module/slide/prd-scroll.html', 
+                [
+                  { 
+                    "imgSrc": "@@webRoot/assets/images/vip/module05/item01.jpg",
+                    "name": "남성 가을 카고 테이퍼 팬츠", 
+                    "price": "99,000" 
+                  },
+                  { 
+                    "imgSrc": "@@webRoot/assets/images/vip/module05/item02.jpg",
+                    "name": "디스커버리 후디", 
+                    "price": "179,000" 
+                  },
+                  { 
+                    "imgSrc": "@@webRoot/assets/images/vip/module05/item03.jpg",
+                    "name": "디스커버리 맨투맨", 
+                    "price": "99,000" 
+                  },
+                  { 
+                    "imgSrc": "@@webRoot/assets/images/vip/module05/item01.jpg",
+                    "name": "남성 가을 카고 테이퍼 팬츠", 
+                    "price": "99,000" 
+                  },
+                  { 
+                    "imgSrc": "@@webRoot/assets/images/vip/module05/item02.jpg",
+                    "name": "디스커버리 후디", 
+                    "price": "179,000" 
+                  },
+                  { 
+                    "imgSrc": "@@webRoot/assets/images/vip/module05/item03.jpg",
+                    "name": "디스커버리 맨투맨", 
+                    "price": "99,000" 
+                  }
+                ]
+              )
+            </ul>
+            <div class="swiper-scrollbar"></div>
+           
+          </div>
+        </div>
+
+
+      </div>
+      <!-- @@include('@@webRoot/components/layout/footer/index.html') -->
+    </div>
+    @@include('@@webRoot/components/layout/bottomMenu/vip.html')
+  </div>
+  @@include('@@webRoot/components/layout/navigation/index.html')
+  @@include('@@webRoot/pages/_template/_scripts.html')
+
+  <script>
+    var app = new App();
+   
+  </script>
+</body>
+</html>

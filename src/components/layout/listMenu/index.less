@@ -1,0 +1,43 @@
+@import '../../../assets/css/_variables.less';
+@import '../../sprites/sprite-icon-variable.less';
+
+.list-menu {
+  position: relative;
+  margin-top: 50px;
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+  top: 0;
+  // transition: top 0.001s linear;
+  z-index: @zIndex-header - 1;
+
+  &.is--fixed {
+    margin-top: 0;
+    position: fixed;
+    top: @header-height;
+    top: calc(~'constant(safe-area-inset-top) +' unit(@header-height, px));
+    top: calc(~'env(safe-area-inset-top) +' unit(@header-height, px));
+    left: 0;
+
+    & + .list-contents {
+      // transition: padding-top 0.3s linear;
+      padding-top: 110px;
+    }
+  }
+}
+
+.list-menu__title {
+  > .button {
+    padding: 17px 0 18px;
+    font-size: 18px;
+    letter-spacing: -0.05em;
+    font-weight: 500;
+  }
+
+  .icon {
+    margin-left: 2px;
+    margin-top: -3px;
+    .sprite-icon;
+    .sprite-icon-slide-down-01;
+  }
+}

@@ -1,0 +1,112 @@
+.layout-navigation {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  box-sizing: border-box;
+  left: 0;
+  background-color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: transform 0.3s linear, visibility 0.3s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.2s 0.3s linear;
+  z-index: @zIndex-navigation;
+
+  &.is-active {
+    transform: translateX(0);
+    visibility: visible;
+    opacity: 1;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), visibility 0.5s cubic-bezier(0.25, 1, 0.5, 1),
+      opacity 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+}
+
+.navigation-banner {
+  img {
+    width: 100%;
+  }
+}
+
+.navigation-header {
+  .unit-flex;
+  .unit-inner;
+  padding: 35px 25px;
+  padding-top: calc(~'constant(safe-area-inset-top)' + 35px);
+  padding-top: calc(~'env(safe-area-inset-top)' + 35px);
+  border-bottom: 2px solid #000;
+}
+
+.navigation-lnb {
+  .unit-flex;
+}
+
+.navigation-lnb__item {
+  position: relative;
+  .unit-flex;
+  line-height: 26px;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.05em;
+
+  &:first-child {
+    font-weight: 600;
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 54px;
+      height: 2px;
+      background-color: #000;
+      bottom: 0;
+      right: -5px;
+    }
+  }
+
+  & + & {
+    margin-left: 30px;
+  }
+
+  > * + * {
+    margin-left: 10px;
+  }
+}
+
+.navigation-conetents {
+  height: calc(~'100% - 99px');
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  box-sizing: border-box;
+  padding-bottom: 60px;
+}
+
+.navigation-menu {
+  .unit-inner;
+  padding: 30px 25px 0;
+  box-sizing: border-box;
+}
+
+.navigation-menu__item {
+  > a {
+    position: relative;
+    display: block;
+    font-size: 28px;
+    line-height: 55px;
+    .nest-letter;
+    font-weight: 600;
+  }
+
+  &.has-sub {
+    > a {
+      &:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        .sprite-icon;
+        .sprite-icon-slide-down-01;
+      }
+    }
+  }
+}

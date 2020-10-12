@@ -1,0 +1,43 @@
+@import '../../assets/css/_variables.less';
+@import './header/index';
+@import './footer/index';
+@import './bottomMenu/index';
+@import './navigation/index';
+
+.layout-main {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  box-sizing: border-box;
+  // padding-top: @header-height;
+  // padding-top: calc(~'constant(safe-area-inset-top)');
+  // padding-top: calc(~'env(safe-area-inset-top)');
+
+  .is--main & {
+    padding-top: 0;
+  }
+
+  .is-sub & {
+    padding-top: @header-height + 1;
+    padding-top: calc(~'constant(safe-area-inset-top)' + unit(@header-height + 1, px));
+    padding-top: calc(~'env(safe-area-inset-top)' + unit(@header-height + 1, px));
+  }
+
+  .has-bottommenu & {
+    padding-bottom: unit(@bottom-menu-height + 1, px);
+    padding-bottom: calc(~'constant(safe-area-inset-bottom) / 2 + ' unit(@bottom-menu-height + 1, px));
+    padding-bottom: calc(~'env(safe-area-inset-bottom) / 2 + ' unit(@bottom-menu-height + 1, px));
+  }
+
+  .has-bottommenu.is-vip & {
+    padding-bottom: unit(@header-height + 1, px);
+    padding-bottom: calc(~'constant(safe-area-inset-bottom) / 2 + ' unit(@header-height + 1, px));
+    padding-bottom: calc(~'env(safe-area-inset-bottom) / 2 + ' unit(@header-height + 1, px));
+  }
+}
+
+.layout-footer {
+  margin-top: auto;
+}

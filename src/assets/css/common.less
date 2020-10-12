@@ -1,0 +1,80 @@
+@import './_variables.less';
+@import './_reset.less';
+@import './_mixin.less';
+
+@import './_swiper.less';
+@import './_sal.less';
+@import './_aos.less';
+
+@import '../../components/fonts/index.less';
+
+@import '../../components/sprites/sprite-icon.less';
+
+@import '../../components/layout/index.less';
+@import '../../components/module/index.less';
+@import '../../components/videoController/index.less';
+
+// =============================================================================
+// custom
+// =============================================================================
+html {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  color: #000;
+}
+
+.is-menu-open {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow-y: scroll;
+}
+
+.sprite-icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.button {
+  text-align: center;
+  border: 0;
+  background-color: transparent;
+}
+
+.image-block {
+  display: block;
+  max-width: 100%;
+}
+
+.hidden-element {
+  .hidden-element;
+}
+
+.unit-inner {
+  position: relative;
+  padding: 0 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.unit-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.unit-flex--center {
+  justify-content: center;
+}
+
+.image {
+  max-width: 100%;
+}
+
+p,
+span,
+img {
+  .user-select;
+}

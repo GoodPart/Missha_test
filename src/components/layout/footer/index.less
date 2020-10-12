@@ -1,0 +1,93 @@
+@import '../../../assets/css/_variables.less';
+@footer-background-color: #19355b;
+
+.layout-footer {
+  background-color: @footer-background-color;
+  color: #fff;
+
+  .unit-inner {
+    padding: 0 30px;
+  }
+}
+
+.footer-util {
+  position: relative;
+  padding: 20px 0;
+
+  .unit-inner {
+    .unit-flex;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.1);
+    left: 30px;
+    bottom: 0;
+  }
+}
+
+.footer-button--app-download {
+  .unit-flex;
+  font-weight: 500;
+
+  .icon {
+    margin-left: 7px;
+  }
+}
+
+.footer-sns {
+  .unit-flex;
+
+  .icon {
+    opacity: 0.4;
+  }
+}
+
+.footer-sns__item {
+  & + & {
+    margin-left: 15px;
+  }
+}
+
+.footer-info {
+  padding: 23px 0 40px;
+  color: #aeaeae;
+}
+
+.footer-menu {
+  .unit-flex;
+  justify-content: initial;
+
+  & + & {
+    margin-top: 13px;
+  }
+}
+
+.footer-menu__item {
+  & + & {
+    margin-left: 22px;
+    .nest-letter;
+  }
+
+  .footer-menu--01 & {
+    font-size: 1.16rem;
+    color: #fff;
+    font-weight: 500;
+  }
+
+  .footer-menu--02 & {
+    color: #fff;
+  }
+}
+
+.footer-address {
+  margin-top: 30px;
+}
+
+.footer-text {
+  margin-top: 10px;
+  line-height: 1.8;
+}
