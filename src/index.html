@@ -10,14 +10,39 @@
     @@include('@@webRoot/components/layout/navigation/index.html')
     
     <div class="module module--01">
-      <div class="swiper-container">
+      <div class="swiper-container full--swiper">
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
             <!-- Slides -->
-            <div class="swiper-slide">Slide 1</div>
-            <div class="swiper-slide">Slide 2</div>
-            <div class="swiper-slide">Slide 3</div>
+            <div class="swiper-slide">
+                <a class="slide-link" href="">
+                  <div class="slide-thumb"><img src="./assets/images/main/module01/module_01_bg_01.jpg" alt=""></div>
+                  <div class="slide-title-container">
+                    <div class="slide-title--item">night pepair</div>
+                    <div class="slide-title--item subtitle">타임레볼루션 보랏빛 앰플 3세대 출시</div>
+                  </div>
+                </a>
+            </div>
+            <div class="swiper-slide">
+              <a class="slide-link" href="">
+                <div class="slide-thumb"><img src="./assets/images/main/module01/module_01_bg_02.jpg" alt=""></div>
+                <div class="slide-title-container">
+                  <div class="slide-title--item">missha 5'th</div>
+                  <div class="slide-title--item subtitle">공식 서포터즈 미샤니아 모집</div>
+                </div>
+              </a>
+          </div>
+          <div class="swiper-slide">
+            <a class="slide-link" href="">
+              <div class="slide-thumb"><img src="./assets/images/main/module01/module_01_bg_03.jpg" alt=""></div>
+              <div class="slide-title-container">
+                <div class="slide-title--item">1+1 for men</div>
+                <div class="slide-title--item subtitle">남자라면 MFM, 지금사면 1+1</div>
+              </div>
+            </a>
         </div>
+        </div>
+        <div class="swiper-pagination"></div>
     </div>
     </div>
     <div class="module module--02">
@@ -446,7 +471,7 @@
         <div class="brand_banner--title">
           <div class="title t01">Time Deal</div>
           <div class="title t02">
-            <!-- @@include(시간 컴포넌트) -->
+            @@include('@@webRoot/components/layout/count/index.html')
           </div>
           <div class="title t03">래디언스 팩트 SPF27 PA++</div>
         </div>
