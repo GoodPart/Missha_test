@@ -8,11 +8,16 @@ const freeSwiper = new Swiper('.free-swiper', {
     slidesPerView: 'auto'
 })
 
-const mySwiper = new Swiper('.swiper-container', {
+const mySwiper = new Swiper('.full--swiper', {
     pagination: {
         el: '.swiper-pagination',
         type: 'bullets',
       },
+      autoplay: {
+          delay: 1000
+      },
+      loop: true
+
 });
 
 
