@@ -1,0 +1,135 @@
+.layout-header {}
+.header-inner {
+    width: 1280px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+.layout-header {
+    position: relative;   
+}
+
+.header-top {
+    background: #000;
+    width: 100%;
+    height: 40px;
+    
+    &:after {
+        display: table;
+        content: '';
+        clear: both;
+    };
+
+
+}
+.header-bot {
+    position: relative;
+}
+.layout-header__container {
+    width: 100%;
+    height: 100%;
+    &:after {
+        display: table;
+        content: '';
+        clear: both;
+    }
+}
+.layout-header__location {
+    float: left;
+    height: 100%;
+
+    // &:after {
+    //     display: table;
+    //     content: '';
+    //     clear: both;
+    // }
+
+    &.type2 {
+        margin: 0 auto;
+        width: 800px;
+        height: 100%;
+        float: inherit;    
+
+        .layout-header__item {
+            padding: 0;
+            height: 100%;
+            color: #000;
+            background: transparent;
+        }
+        .layout-header__link {
+            color: #000;
+        }
+    }
+}
+
+.layout-header__right-section {
+    float: right;
+}
+
+.layout-header__item {
+    float: left;
+    padding: 13px 15px 16px;
+    max-height: 40px;
+    background: #000;
+
+    
+
+    &.is_active {
+        background: #fff;
+
+        .layout-header__link {
+            color: #000;
+        }
+    }
+}
+
+.layout-header__link {
+    display: block;
+    text-align: center;
+    width: 100%;
+    // padding: 13px 15px 16px;
+    color: #fff;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+
+.layout-header__txt {
+    color: #fff;
+}
+.layout-header__count {
+    color: #ff0000;
+}
+
+/*header-bot*/
+
+.layout-header__section {
+    position: relative;
+    width: 100%;
+    &:after {
+        display: table;
+        content: '';
+        clear: both;
+    }
+
+    &.section02 {
+        height: 60px;
+        border-top: 1px solid #000;
+        border-bottom: 1px solid #000;
+    }
+}
+
+.layout-header__menu {
+    float: left;
+    padding: 40px 0 35px;
+
+    &.search {
+        float: right;
+    }
+    &.logo {
+        position: absolute;
+        top: 16px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 0;
+    }
+}
