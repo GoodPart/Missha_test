@@ -2,12 +2,246 @@
   position: relative;
 }
 .module-inner {
-  width: 1280px;
+  width: 1200px;
   margin: 0 auto;
   box-sizing: border-box;
 }
+.module-more {
+    width: 140px;
+    margin: 0;
+    
+    &.lg {
+        width: 220px;
+        padding: 24px 0;
+        margin: 80px auto;
 
+        button {
+            font-size: 18px;
+        }
+    }
 
+    &.black {
+        background: #000;
+        button {
+            color: #fff;
+        }
+    }
+    &.border {
+        background: transparent;
+        border: 1px solid #000;
+        color: #000;
+        padding: 18px 0;
+    }
+    &.img {
+        width: inherit;
+        width: 50px;
+        height: 50px;
+        background-image: url("../images/main/pc/module02/module_02_sticker.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin: 70px auto;
+    }
+
+    .more {
+        width: 100%;
+        background: transparent;
+        font-size: 15px;
+    }
+}
+
+.module-title {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 30px;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 48px;
+    letter-spacing: -0.1px;
+    text-transform: uppercase;
+    background: #fff;
+}
+
+.module-container { 
+    position: relative;
+    border-top: 1px solid #000;
+}
+
+.module-container--item {
+    margin-top: 70px;
+}
+.module-item--list:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.module-item--item {
+    float: left;
+    margin-right: 12px;
+    margin-bottom: 19px;
+    max-width: 291px;
+    width: 100%;
+
+    .module-item--thumb {
+        &.reverse {
+            text-align: right;
+        }
+    }
+
+    
+
+    &:nth-child(4n) {
+        margin-right: 0;
+    }
+    
+}
+.module-link {
+    display: block;
+    width: 100%;
+}
+.module-item--info {
+    padding: 20px;
+
+    &.modify-position {
+        position: absolute;
+        top: 144px;
+        right: 0;
+    }
+    &.reverse {
+        top: 50px;
+        left: 0;
+
+        .title,
+        .inner-title,
+        .inner-desc {
+            text-align: right;
+        }
+    }
+}
+
+.module-info--title {
+    .title {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 26px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+}
+
+.module-info--price {
+    margin-top: 18px;
+    font-weight: 600;
+
+    >span:before {
+        content: '₩';
+        display: inline;
+    }
+
+    .original {
+        margin-right: 10px;
+        opacity: 0.6;
+        text-decoration: line-through;
+    }
+}
+
+.module-item--inner-info {
+    padding-top: 64px;
+    padding-left: 205px;
+    max-width: 320px;
+
+    .inner-title {
+        
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 26px;
+        line-height: -0.2px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+    .inner-desc {
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+
+}
+
+.module--01 {
+    padding-top: 110px;
+}
+
+.module--02 {
+    .module-item--info {
+        max-width: 606px;
+    }
+    .module-item--item {
+        position: relative;
+        float: inherit;
+        max-width: inherit;
+        margin-right: inherit;
+        margin-bottom: 140px;
+
+        &.item02 {
+            .module-item--inner-info {
+                max-width: 250px;
+            }
+        }
+
+        &.item03 {
+            .modify-position {
+                top: 80px;
+                left: 450px;
+            }
+            .module-item--inner-info {
+                padding-left: 140px;
+            }
+
+            .inner-title {
+                max-width: 200px;
+            }
+            .inner-desc {
+                max-width: 280px;
+            }
+
+        }
+    }
+    .title {
+        font-size: 75px;
+        line-height: 75px;
+        font-weight: 900;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+
+    .visual_image {
+        position: absolute;
+        top: 341px;
+        left: 858px;
+
+        &.img01 {
+            top: 610px;
+            left: 40px;
+        }
+        &.img03 {
+            top: 211px;
+            left: 1054px;
+        }
+    }
+}
+.module--03 {
+    height: 500px;
+}
 
 // .module {
 //     &__inner {
