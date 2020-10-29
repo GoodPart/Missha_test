@@ -66,6 +66,51 @@
     }
 }
 
+.module-main-visual {
+    position: relative;
+}
+
+.main-visual-tab {
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    // background: coral;
+
+    &:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+
+    .tab-list {
+        float: left;
+        background: rgba(255,255,255,0.5);
+        padding: 13px 0;
+        text-align: center;
+        color: #000;
+        cursor: pointer;
+        transition:  0.3s ease-in-out;
+
+        &.is_active {
+            color: #fff;
+            background: #2b2520;
+        }
+
+        .count-container {
+            display: none;
+            
+            &.is_active {
+                color: #fff;
+                display: inline-block;
+                >span {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
 .module {
   position: relative;
 }
