@@ -1,4 +1,9 @@
+@import '../../components/fonts/index.less';
 
+#count {
+    font-family: 'sans-serif';
+    font-weight: normal;
+}
 
 .layout-container {
     width: 1500px;
@@ -28,11 +33,16 @@
     height: 100%;
 }
 .container {
+
+    .ico_link {
+        display: block;
+    }
    
     .ico_thumb {
         text-align: center;
     }
     .ico_btn--title {
+        margin-top: 8px;
         font-weight: 600;
         font-size: 12px;
         text-align: center;
@@ -83,11 +93,15 @@
         a {
             color: #fff;
         }
+
+        img {
+            vertical-align: middle;
+        }
     }
     a {
         font-weight: 600;
         font-size: 13px;
-        padding: 10px 0;
+        padding: 12px 0;
         display: block;
         
     }
@@ -99,6 +113,19 @@
     .aside_sns {
         display: inline-block;
         width: 33.333333%;
+        height: 19px;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        
+        &.fb {
+            background-image: url("../images/aside/ico_aside_fb.jpg");
+        }
+        &.instar {
+            background-image: url("../images/aside/ico_aside_instar.jpg");
+        }
+        &.what {
+            background-image: url("../images/aside/ico_aside_what.jpg");
+        }
     }
 }
 
@@ -109,7 +136,7 @@
     .swiper-button-prev {
         cursor: pointer;
         position: absolute;
-        top: 110px;
+        top: 120px;
         left: 50%;
         transform: translateX(-50%);
         width: 18px;
@@ -126,7 +153,7 @@
         cursor: pointer;
         position: absolute;
         top: inherit;
-        bottom: 140px;
+        bottom: 170px;
         left: 50%;
         transform: translateX(-50%) rotate(180deg);
         width: 18px;
@@ -541,27 +568,40 @@
 
 .module-info--title {
     .title {
+        min-height: 52px;
         font-weight: 600;
         font-size: 16px;
         line-height: 26px;
         overflow: hidden;
         text-overflow: ellipsis;
         display: -webkit-box;
-        -webkit-line-clamp: 2;
+        -webkit-line-clamp: 1;
         -webkit-box-orient: vertical;
+
+        &.title--double {
+            -webkit-line-clamp: 2;
+        }
     }
 }
 
 .module-info--price {
-    margin-top: 18px;
+    // margin-top: 18px;
     font-weight: 600;
+    font-size: 0;
+    span {
+        display: inline-block;
+        font-size: 16px;
+    }
 
     >span:before {
         content: '₩';
         display: inline;
+        // line-height: 48px;
     }
 
     .original {
+        
+        font-weight: normal;
         margin-right: 10px;
         opacity: 0.6;
         text-decoration: line-through;
@@ -645,11 +685,17 @@
         font-size: 75px;
         line-height: 75px;
         font-weight: 900;
+        letter-spacing: -0.01em;
         overflow: hidden;
         text-overflow: ellipsis;
         display: -webkit-box;
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
+    }
+
+    .inner-title,
+    .inner-desc {
+        letter-spacing: -0.02em;
     }
 
     .visual_image {
@@ -720,12 +766,13 @@
     }
     
     .module-title {
-        top: 80px;
+        padding-top: 71px;
+        // top: 80px;
         background: transparent;
         color: #fff;
     }
     .module-container--item {
-        padding-top: 80px;
+        padding-top: 51px;
         margin-top: 0;
     }
 
@@ -752,6 +799,7 @@
     }
     .module-info--title {
         .title {
+            min-height: 0;
             display: block;
             font-size: 20px;
             text-decoration: underline;
@@ -835,10 +883,13 @@
 
         &.t01 {
             font-size: 15px;
+            line-height: 26px;
         }
         &.t02 {
+            line-height: 26px;
             font-weight: 900;
             font-size: 28px;
+            letter-spacing: -0.02em;
         }
 
         
@@ -849,7 +900,8 @@
         font-size: 15px;
         opacity: 0.8;
         line-height: 23px;
-        letter-spacing: -2px;
+        letter-spacing: -0.02em;
+
         &:after {
             content: '';
             position: absolute;
@@ -861,6 +913,8 @@
             background: #000;
         }
     }
+
+
     .module-more {
         width: 200px;
         margin: 40px auto;
@@ -916,15 +970,20 @@
         .module-info--price {
             margin-top: 0;
         }
+        .sale {
+            font-size: 15px;
+            line-height: 48px;
+        }
         .title {
             font-size: 18px;
         }
         .desc {
             font-size: 14px;
+            letter-spacing: 0.02em;
             line-height: 22px;
             opacity: 0.7;
             display: block;
-            margin: 25px 0 20px;
+            margin: 17px 0 4px;
             overflow: hidden;
             text-overflow: ellipsis;
             display: -webkit-box;
@@ -932,6 +991,16 @@
             -webkit-box-orient: vertical;
         }
     }//product
+
+    .module-more {
+        margin: 21px 0;
+        width: 110px;
+        
+        .more {
+            padding: 0;
+            line-height: 48px;
+        }
+    }
 
     
     
@@ -970,9 +1039,18 @@
         float: right;
     }
 
+    .module-banner--title {
+        font-size: 32px;
+        
+    }
+    .module-banner--desc{
+        font-size: 16px;
+    }
+
     .module-banner--title,
     .module-banner--desc {
-        float: left;
+        line-height: 48px;
+        vertical-align: middle;
         margin: 0;
     }
     .module-banner--desc {
@@ -1004,14 +1082,19 @@
         padding: 20px 0;
     }
     .module-item--title {
-        margin-top: 24px;
+        margin-top: 7px;
+        font-size: 14px;
+        line-height: 48px;
+        letter-spacing: 0.02em;
 
         &.addon {
             position: relative;
             
             &:after {
                 content: ' ▼';
-            display: inline;
+                display: inline;
+                font-size: 1px;
+                vertical-align: middle;
             }
         }
     }
@@ -1122,8 +1205,8 @@
         border-bottom: 1px solid #e5e5e5;
         
         span {
-            line-height: 26px;
-            margin: 20px 0;
+            line-height: 24px;
+            margin: 16px 0;
             overflow: hidden;
             text-overflow: ellipsis;
             display: -webkit-box;
@@ -1159,6 +1242,9 @@
         // display: block;
     }
     .comment-id {
+        font-size: 12px;
+        line-height: 22px;
+        letter-spacing: 0.06em;
         margin-left: 10px;
         overflow: hidden;
         max-width: 200px;
@@ -1167,7 +1253,9 @@
     }
 
     .comment-txt {
-        line-height: 20px;
+        opacity: 0.5;
+        line-height: 22px;
+        letter-spacing: 0.06em;
         overflow: hidden;
         text-overflow: ellipsis;
         display: -webkit-box;
