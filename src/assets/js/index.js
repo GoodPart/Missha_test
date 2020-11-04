@@ -4,11 +4,46 @@ import Masonry from 'masonry-layout'
 
 var nestCurrent = 0;
 
-const paginationName = ['시즌 이벤트', '신제품', '구매사은품', '1+1품목', '기획전'];
+// const paginationName = ['시즌 이벤트', '신제품', '구매사은품', '1+1품목', '기획전'];
 let nestSlideLength = [];
+let nestSlideMaxCount = ''
+
+// console.log("nestCurrent-초기값", nestCurrent)
 
 
-console.log("nestCurrent-초기값", nestCurrent)
+const swiper2 = new Swiper('.swiper2', {
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+});
+
+
+const verticalSwiper = new Swiper('.vertical-swiper', {
+  direction: "vertical",
+  slidesPerView: 3,
+  // height: 49,
+  spaceBetween: 18,
+  slidesOffsetBefore: 10,
+  // slidesOffsetBefore: 39,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  // pagination: {
+  //   el: '.swiper-pagination',
+  //   clickable: true,
+  // },
+  on:{
+    init: function() {
+      //init function
+    },
+  }
+});
 
 
 const freeSwiper = new Swiper('.free-swiper', {
@@ -52,7 +87,7 @@ function appendSlide(slides, index) {
   const tabTitle = slides.attributes[1].value;
   const maxCount = mainSwiperSlides.length;
   const nestSlide = slides.querySelectorAll(".swiper-slide");
-  const nestSlideMaxCount = nestSlide.length;
+  nestSlideMaxCount = nestSlide.length;
 
   //카운트 백틱
   const count =`
@@ -60,9 +95,14 @@ function appendSlide(slides, index) {
     <span class="count-${index}">${nestCurrent+1}</span> / <span>${nestSlideMaxCount}</span>
   </span>
   `
+  const countNone = `
+  <span class="count-container is_disabled">
+  </span>
+  `
 
-  slide.className = "tab-list"
-  slide.innerHTML=tabTitle+ count
+  slide.className = "tab-list"  
+  console.log("append", nestSlideMaxCount)
+  nestSlideMaxCount <=0 ? slide.innerHTML=tabTitle+ countNone : slide.innerHTML=tabTitle+ count
   slide.style.width = 100/ maxCount+'%'
   mainTab.appendChild(slide)
   
@@ -74,22 +114,16 @@ const mainVisualTab = document.querySelector(".main-visual-tab");
 mainSwiperSlides.forEach((slides, index) => {
   const nestSlides = slides.querySelectorAll(".swiper-slide");
   
-
   appendSlide(slides, index);
-  // addName(slides);
-
-  console.log("mySwiper 슬라이드 갯수", slides.length)
 
   if(nestSlides.length === 0) {
     nestSlideLength.push(0)
   }else {
-
     nestSlideLength.push(nestSlides.length)
-
-
-
   }
-  console.log("nestSlideLength", nestSlideLength)
+
+  
+  // console.log("nestSlideLength", nestSlideLength)
 })
 
 
@@ -103,9 +137,6 @@ const mySwiper = new Swiper('.main-swiper', {
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
-    renderBullet: function(index, className) {
-      return '<span alt='+paginationName[index]+' class="' + className + '">'+ paginationName[index] + nestCurrent +'/'+ nestSlideLength[index] + '</span>';
-    }
   },
   on:{
     init: function() {
@@ -114,7 +145,6 @@ const mySwiper = new Swiper('.main-swiper', {
 
       tab[this.activeIndex].classList.add("is_active")
       countContainer[this.activeIndex].classList.add("is_active")
-
     },
     slideChange: function() {
 
@@ -124,12 +154,12 @@ const mySwiper = new Swiper('.main-swiper', {
       const tabArray = document.querySelectorAll(".tab-list");
       const countContainer = document.querySelectorAll(".count-container");
 
-
-
       tabArray.forEach((tab, index)=> {
         if(this.activeIndex ===index) {
           tab.classList.add("is_active")
+
           countContainer[index].classList.add("is_active")
+          
         }else {
           tab.classList.remove("is_active")
           countContainer[index].classList.remove("is_active")
@@ -144,8 +174,6 @@ const tt = document.querySelectorAll(".tab-list");
 tt.forEach((t,index)=> {
   t.addEventListener("click", function(e) {
     mySwiper.slideTo(index, 500);
-    console.log("hit", e)
-    console.log("hit--t", t)
   })
 })
 
@@ -181,34 +209,20 @@ var x = setInterval(function() {
 
 //리뷰 아이디 **표시
 const reviewId = document.querySelectorAll(".comment-id");
-// console.log(reviewId)
+
 reviewId.forEach(id => {
   const userId = id.innerHTML;
-
   const resultId = userId.slice(0,-3)+'***'
   
-
   return id.innerHTML = resultId
-  // return id.innerText = userId;
 })
   
+//랭크
 const ranks = document.querySelectorAll(".rank")
-// console.log("rank", rank)
 ranks.forEach(rank => {
   const rankData = rank.attributes[1].value;
-  // console.log(rankData)
 })
 
-
-
-
-// for(var i = 0; i <moduleNavigation.children.length; i++) {
-  
-// }
-
-// const buttons = document.querySelectorAll("#select .button")
-
-// var elem = document.querySelector('.grid');
 var grid = document.querySelector('.grid');
 var msnry = new Masonry( grid, {
   // options...
@@ -216,6 +230,3 @@ var msnry = new Masonry( grid, {
   gutter: 40
   // columnWidth: 200
 });
-
-
-
