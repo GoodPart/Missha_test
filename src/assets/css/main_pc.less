@@ -1049,12 +1049,27 @@
             float: left;
         }
         .head-state {
+            max-width: 140px;
+            // width: 140px;
             padding-top: 15px;
             float: right;
+            
 
         }
         .head-state-item {
             font-size: 13px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+
+            &.txt {
+                font-size: 13px;
+                font-weight: 600;
+                color: #ff0000;
+            }
 
             &.count {
                 margin-top: 0;
@@ -1103,14 +1118,18 @@
         font-weight: 600;
         font-size: 14px;
         letter-spacing: 0.4px;
-        padding: 20px 0;
         border-top: 1px solid #b2b2b2;
         border-bottom: 1px solid #e5e5e5;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
+        
+        span {
+            line-height: 26px;
+            margin: 20px 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
     }
 
     .review-comment {
@@ -1119,16 +1138,20 @@
     .comment-top {
         position: relative;
         margin: 15px 0;
+        font-size: 0;
 
-        &:after {
-            content: '';
-            display: table;
-            clear: both;
-        }
+        // &:after {
+        //     content: '';
+        //     display: table;
+        //     clear: both;
+        // }
 
         span {
-            display: block;
-            float: left;
+            font-size: 12px;
+            font-weight: 600;
+            display: inline-block;
+            vertical-align: middle;
+            // float: left;
         }
     }
 
@@ -1137,6 +1160,9 @@
     }
     .comment-id {
         margin-left: 10px;
+        overflow: hidden;
+        max-width: 200px;
+        text-overflow: ellipsis;
         // display: block;
     }
 
