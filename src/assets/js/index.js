@@ -1,5 +1,8 @@
 import Swiper from 'swiper';
 import Masonry from 'masonry-layout'
+import AOS from 'aos';
+
+
 
 
 var nestCurrent = 0;
@@ -34,15 +37,6 @@ const verticalSwiper = new Swiper('.vertical-swiper', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-  // pagination: {
-  //   el: '.swiper-pagination',
-  //   clickable: true,
-  // },
-  on:{
-    init: function() {
-      //init function
-    },
-  }
 });
 
 
@@ -59,6 +53,10 @@ const nested = new Swiper('.nest-container', {
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
+  },
+  navigation: {
+    nextEl: '.swiper-button-n',
+    prevEl: '.swiper-button-p',
   },
   on:{
     init: function() {
@@ -79,6 +77,9 @@ const nested = new Swiper('.nest-container', {
 });
 
 
+function appendArrow(slides, index) {
+
+}
 
 
 function appendSlide(slides, index) {
@@ -88,6 +89,28 @@ function appendSlide(slides, index) {
   const maxCount = mainSwiperSlides.length;
   const nestSlide = slides.querySelectorAll(".swiper-slide");
   nestSlideMaxCount = nestSlide.length;
+
+  const arrowBox = document.createElement("div");
+  // const arrowItem = document.createElement("p");
+
+  arrowBox.className = "arrow-box"
+  // arrowItem.className = "arrow-item"
+
+  const arrowLayout = `
+    <p class="arrow arrow--prev">
+    </p>
+    <p class="arrow arrow--next">
+    </p>
+  `
+
+
+  //arrow-box에 추가
+  arrowBox.innerHTML = arrowLayout
+
+  
+
+  
+
 
   //카운트 백틱
   const count =`
@@ -104,7 +127,10 @@ function appendSlide(slides, index) {
   console.log("append", nestSlideMaxCount)
   nestSlideMaxCount <=0 ? slide.innerHTML=tabTitle+ countNone : slide.innerHTML=tabTitle+ count
   slide.style.width = 100/ maxCount+'%'
+  
   mainTab.appendChild(slide)
+  nestSlideMaxCount <=0 ? slide :slide.appendChild(arrowBox)
+  // slide.appendChild(arrowBox)
   
 }
 
@@ -177,6 +203,32 @@ tt.forEach((t,index)=> {
   })
 })
 
+const mainVisualArrowBoxs = document.querySelectorAll(".arrow-box");
+const nesteds = document.querySelectorAll(".nest-container");
+mainVisualArrowBoxs.forEach((mainVisualArrowBox, index) => {
+  console.log("mainVisualArrows", mainVisualArrowBox)
+
+  mainVisualArrowBox.children[0].addEventListener("click", (e)=> {
+    if(index === mySwiper.activeIndex) {
+      nesteds[index].children[1].click();
+    }
+
+  })
+  mainVisualArrowBox.children[1].addEventListener("click", (e)=> {
+    if(index === mySwiper.activeIndex) {
+      nesteds[index].children[2].click();
+    }
+    
+    //   console.log("mainVisualArrowBoxChild -click ", e)
+    // console.log("mainVisualArrowBoxChild -click index", index)
+  })
+
+  // mainVisualArrowBox.children.addEventListener("click", (e)=> {
+  //   console.log("mainVisualArrows -click ", e)
+  //   console.log("mainVisualArrows -click index", index)
+  // })
+  
+})
 
 
 /*
