@@ -1,143 +1,136 @@
 .layout-header {
-    min-width: 1500px;
-    margin-bottom: 40px;
+  min-width: 1500px;
+  margin-bottom: 40px;
 }
 .header-inner {
-    width: 1500px;
-    margin: 0 auto;
-    padding: 0 150px;
-    box-sizing: border-box;
-  }
+  width: 1500px;
+  margin: 0 auto;
+  padding: 0 150px;
+  box-sizing: border-box;
+}
 
 .layout-header {
-    position: relative;   
+  position: relative;
 }
 
 .header-top {
-    background: #000;
-    width: 100%;
-    height: 40px;
-    
-    &:after {
-        display: table;
-        content: '';
-        clear: both;
-    };
+  background: #000;
+  width: 100%;
+  height: 40px;
 
-
+  &:after {
+    display: table;
+    content: '';
+    clear: both;
+  }
 }
 .header-bot {
-    position: relative;
+  position: relative;
 }
 .layout-header__container {
-    width: 100%;
-    height: 100%;
-    &:after {
-        display: table;
-        content: '';
-        clear: both;
-    }
+  width: 100%;
+  height: 100%;
+  &:after {
+    display: table;
+    content: '';
+    clear: both;
+  }
 }
 .layout-header__location {
-    float: left;
+  float: left;
+  height: 100%;
+
+  &.type2 {
+    margin: 0 auto;
+    font-size: 0;
     height: 100%;
+    float: inherit;
+    text-align: center;
 
-    &.type2 {
-        margin: 0 auto;
-        font-size: 0;
-        height: 100%;
-        float: inherit;    
-        text-align: center;
-
-        .layout-header__item {
-            padding: 23px 20px;
-            height: 100%;
-            color: #000;
-            background: transparent;
-        }
-        .layout-header__link {
-            font-size: 16px;
-            font-weight: 600;
-            color: #000;
-        }
+    .layout-header__item {
+      padding: 23px 20px;
+      height: 100%;
+      color: #000;
+      background: transparent;
     }
+    .layout-header__link {
+      font-size: 16px;
+      font-weight: 600;
+      color: #000;
+    }
+  }
 }
 
 .layout-header__right-section {
-    float: right;
+  float: right;
 }
 
 .layout-header__item {
-    display: inline-block;
-    // float: left;
-    padding: 13px 15px 14px;
-    max-height: 40px;
-    background: #000;
+  display: inline-block;
+  // float: left;
+  padding: 13px 15px 14px;
+  max-height: 40px;
+  background: #000;
 
-    
+  &.is_active {
+    padding-bottom: 16px;
+    background: #fff;
 
-    &.is_active {
-        padding-bottom: 16px;
-        background: #fff;
-
-        .layout-header__link {
-            color: #000;
-        }
+    .layout-header__link {
+      color: #000;
     }
+  }
 }
 
 .layout-header__link {
-    display: block;
-    text-align: center;
-    width: 100%;
-    // padding: 13px 15px 16px;
-    color: #fff;
-    font-size: 11px;
-    text-transform: uppercase;
+  display: block;
+  text-align: center;
+  width: 100%;
+  // padding: 13px 15px 16px;
+  color: #fff;
+  font-size: 11px;
+  text-transform: uppercase;
 }
 
 .layout-header__txt {
-    color: #fff;
+  color: #fff;
 }
 .layout-header__count {
-    color: #ff0000;
+  color: #ff0000;
 }
 
 /*header-bot*/
 
 .layout-header__section {
-    position: relative;
-    width: 100%;
-    &:after {
-        display: table;
-        content: '';
-        clear: both;
-    }
+  position: relative;
+  width: 100%;
+  &:after {
+    display: table;
+    content: '';
+    clear: both;
+  }
 
-    &.section02 {
-        // height: 60px;
-        border-top: 1px solid #000;
-        border-bottom: 1px solid #000;
-    }
+  &.section02 {
+    // height: 60px;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+  }
 }
 
 .layout-header__menu {
-    position: absolute;
-    top: 41px;
+  position: absolute;
+  top: 41px;
 
-    &.search {
-        right: 40px;
-        // float: right;
-    }
-    &.hamb {
-        left: 40px;
-        
-    }
-    &.logo {
-        position: inherit;
-        top: 0;
-        padding: 34px 0 35px;
-        
-        
-    }
+  &.search {
+    right: 40px;
+    // float: right;
+  }
+  &.hamb {
+    left: 40px;
+  }
+  &.logo {
+    position: inherit;
+    top: 0;
+    padding: 34px 0 35px;
+  }
 }

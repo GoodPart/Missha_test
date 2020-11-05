@@ -66,7 +66,7 @@ const nested = new Swiper('.nest-container', {
 
       nestCurrent = this.activeIndex+1;
       const index = this.activeIndex;
-      console.log(mySwiper.activeIndex, index);
+      // console.log(mySwiper.activeIndex, index);
       
       document.querySelector(".count-"+mySwiper.activeIndex).innerHTML= nestCurrent
       // nestCurrent = 0;
@@ -75,12 +75,6 @@ const nested = new Swiper('.nest-container', {
     }
   }
 });
-
-
-function appendArrow(slides, index) {
-
-}
-
 
 function appendSlide(slides, index) {
   const mainTab = document.querySelector(".main-visual-tab");
@@ -102,14 +96,8 @@ function appendSlide(slides, index) {
     <p class="arrow arrow--next">
     </p>
   `
-
-
   //arrow-box에 추가
   arrowBox.innerHTML = arrowLayout
-
-  
-
-  
 
 
   //카운트 백틱
@@ -124,13 +112,12 @@ function appendSlide(slides, index) {
   `
 
   slide.className = "tab-list"  
-  console.log("append", nestSlideMaxCount)
+  // console.log("append", nestSlideMaxCount)
   nestSlideMaxCount <=0 ? slide.innerHTML=tabTitle+ countNone : slide.innerHTML=tabTitle+ count
   slide.style.width = 100/ maxCount+'%'
   
   mainTab.appendChild(slide)
   nestSlideMaxCount <=0 ? slide :slide.appendChild(arrowBox)
-  // slide.appendChild(arrowBox)
   
 }
 
@@ -148,8 +135,7 @@ mainSwiperSlides.forEach((slides, index) => {
     nestSlideLength.push(nestSlides.length)
   }
 
-  
-  // console.log("nestSlideLength", nestSlideLength)
+
 })
 
 
@@ -206,28 +192,28 @@ tt.forEach((t,index)=> {
 const mainVisualArrowBoxs = document.querySelectorAll(".arrow-box");
 const nesteds = document.querySelectorAll(".nest-container");
 mainVisualArrowBoxs.forEach((mainVisualArrowBox, index) => {
-  console.log("mainVisualArrows", mainVisualArrowBox)
+  // console.log("mainVisualArrows", mainVisualArrowBox)
 
   mainVisualArrowBox.children[0].addEventListener("click", (e)=> {
     if(index === mySwiper.activeIndex) {
-      nesteds[index].children[1].click();
+      if(nested.activeIndex === 1) {
+        console.log("이전으로 이동")
+      }else {
+        nesteds[index].children[1].click();
+      }
     }
-
   })
   mainVisualArrowBox.children[1].addEventListener("click", (e)=> {
-    if(index === mySwiper.activeIndex) {
-      nesteds[index].children[2].click();
-    }
     
-    //   console.log("mainVisualArrowBoxChild -click ", e)
-    // console.log("mainVisualArrowBoxChild -click index", index)
+    if(index === mySwiper.activeIndex) {
+      if(nested.activeIndex === nestSlideMaxCount) {
+        console.log("다음으로 이동")
+      }else {
+        nesteds[index].children[2].click();
+      }
+    }
   })
 
-  // mainVisualArrowBox.children.addEventListener("click", (e)=> {
-  //   console.log("mainVisualArrows -click ", e)
-  //   console.log("mainVisualArrows -click index", index)
-  // })
-  
 })
 
 
